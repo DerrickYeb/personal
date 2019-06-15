@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .register {
+            margin-top: 40px;
+        }
+        
+        body {
+            background-color: dodgerblue;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-login">
+            <div class="modal-content">
+                <form action="/examples/actions/confirmation.php" method="post">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" class="form-control" required="required">
+                        </div>
+                        <div class="form-group">
+                            <div class="clearfix">
+                                <label>Password</label>
+                                <a href="#" class="pull-right text-muted"><small>Forgot?</small></a>
+                            </div>
+
+                            <input type="password" class="form-control" required="required">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <label class="checkbox-inline pull-left"><input type="checkbox"> Remember me</label>
+                        <input type="submit" class="btn btn-primary pull-right" value="Login">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container shadow-lg p-3 bg-white rounded register">
+        <form action="/register" method="post">
+            <legend style="text-align: center;">Registration</legend>
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Full Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" placeholder="Please your full name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" name="email" id="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="telephone" class="col-sm-2 control-label">Phone Number</label>
+                <div class="col-sm-10">
+                    <input type="tel" class="form-control" name="phone" id="phone" data-constraint="&#a-z!()*)_+@$%^A-Z">
+                </div>
+            </div>
+            <div class="form-group">
+
+                <div class="form-group">
+                    <label for="inputDate of Birth" class="col-sm-2 control-label">Date of Birth:</label>
+                    <div class="col-sm-10">
+                        <input type="date" name="Date of Birth" id="inputDate of Birth" class="form-control" value="" required="required" title="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="input" class="col-sm-2 control-label">Country:</label>
+                <div class="col-sm-10">
+                    <select name="" id="input" class="form-control">
+                        <option value="">-- Select One --</option>
+                        <option value="">Ghana</option>
+                        <option value="">USA</option>
+                        <option value="">UK</option>
+                        <option value="">Nigeria</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    Please read our <a href="">Terms & Conditions</a>
+                </label>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <button type="submit" class="btn btn-large btn-block btn-success">Submit</button>
+                </div>
+            </div>
+            <p>
+                If already registered please login with your login credentials
+                <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-trigger="#myModal">Login</button>
+            </p>
+
+
+            <a class="btn btn-large btn-block btn-primary" href="index.html" role="button">Home</a>
+
+        </form>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
